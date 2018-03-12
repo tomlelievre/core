@@ -1062,6 +1062,8 @@ var DateTimePicker = function ($, moment) {
                 throw new TypeError('locale() locale ' + _locale + ' is not loaded from moment locales!');
             }
 
+            this._options.locale = _locale;
+
             for (var i = 0; i < this._dates.length; i++) {
                 this._dates[i].locale(this._options.locale);
             }
